@@ -1,4 +1,4 @@
-liste = ["Onur DEMİR","Çby"]
+liste = []
 
 def newstudent():
     new=str(input("Lütfen isminizi ve soyisminizi giriniz: "))
