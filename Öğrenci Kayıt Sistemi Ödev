@@ -1,0 +1,54 @@
+liste = ["Onur DEMİR","Çby"]
+
+def newstudent():
+    new=str(input("Lütfen isminizi ve soyisminizi giriniz: "))
+    liste.append(f"{new}")
+    print(liste)
+
+def deletestudent():
+    delete=str(input("Lütfen listeden silmek istediğiniz ismi soyismi giriniz: "))
+    for i in liste:
+        if i==delete:
+            liste.remove(f"{i}")
+    print(liste)
+
+def newstudents():
+    i=0
+    numberstudent=int(input("Eklemek istediğiniz öğrenci sayısını seçiniz: "))
+    while(i<numberstudent):
+        namestudent=str(input("Eklemek istediğiniz öğrencinin ismi soyismi: "))
+        liste.append(f"{namestudent}")
+        print(liste)
+        i+=1
+
+def printstudent():
+    for i in liste:
+        print(i)
+
+def number():
+    student=str(input("Numarasını öğrenmek istediğiniz öğrencinin ismini soyismini giriniz: "))
+    for i in range(len(liste)):
+        if liste[i]==student:
+            print(f"{student} numarası:{i}")
+       
+def multidelete():
+   deletenumber=int(input("Silinecek öğrenci sayısını giriniz: "))
+   for i in range(deletenumber):
+        deletestudent=str(input("Silinecek öğrencinin ismini soyismini giriniz: "))
+        liste.remove(f"{deletestudent}")
+        print(liste)
+
+   
+
+newstudent()
+deletestudent()
+newstudents()
+printstudent()
+number()
+multidelete()
+
+  
+
+
+
+
